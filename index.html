@@ -15,12 +15,19 @@
     <div class="overlay-blur" id="mask" onclick="toggleSidebar()"></div>
 
     <section class="main-display">
-        <img src="/images/01.png" class="char-img" alt="">
-
         <div class="info-overlay">
-            <h1 style="font-size: 4rem; margin: 0; color: #444; letter-spacing: -2px;">Yuki Project</h1>
-            
+            <div class="brand-group">
+                <h1 class="main-title">Yuki Project</h1>
+            </div>  
         </div>
+        
+        <div class="pv-thumb" style="display: none;">
+            <div class="play-icon">▶</div>
+            <div class="play-text">NEW PV PLAY</div>
+        </div>
+    </section>
+    <section class="image-display">        
+        <img src="/images/01.png" class="char-img" alt="Kurosawa Yuki">
     </section>
 
     <aside class="nav-sidebar" id="sidebar">
@@ -35,9 +42,6 @@
         <button onclick="toggleSidebar()" style="margin-top: 30px; border: none; background: none; color: #999; cursor: pointer; font-size: 12px;">CLOSE ✕</button>
     </aside>
 
-    <div class="pv-thumb" style="display: none;">
-        <div style="color:white; font-size: 14px; font-weight: bold;">▶ New PV Play</div>
-    </div>
 </div>
 
 <script>

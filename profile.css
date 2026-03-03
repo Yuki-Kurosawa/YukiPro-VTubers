@@ -1,0 +1,59 @@
+/* --- 子页面专用组件 --- */
+
+/* 1. 成员卡片 (用于 Character 页面) */
+.talent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.talent-card {
+    background: white;
+    border: 2px solid var(--theme-color);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.talent-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 157, 187, 0.3);
+}
+
+.talent-avatar {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: #eee;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+/* 2. 新闻列表 (用于 News 页面) */
+.news-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px dashed var(--theme-color);
+    text-decoration: none;
+    color: #444;
+}
+
+.news-date {
+    font-size: 0.8rem;
+    color: var(--theme-color);
+    width: 100px;
+    font-weight: bold;
+}
+
+.news-tag {
+    font-size: 0.7rem;
+    background: var(--theme-color);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 15px;
+}

@@ -68,32 +68,6 @@
             transform: scale(1.05);
         }
 
-        /* 菜单触发圆点 */
-        .menu-trigger {
-            position: absolute;
-            top: 25px;
-            right: 25px;
-            width: 60px;
-            height: 60px;
-            background: #26c6da;
-            border: 4px solid white;
-            border-radius: 50%;
-            z-index: 101;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
-
-        .menu-trigger::after {
-            content: "MENU";
-            color: white;
-            font-size: 10px;
-            font-weight: bold;
-        }
-
         /* 遮罩层 */
         .overlay-blur {
             position: absolute;

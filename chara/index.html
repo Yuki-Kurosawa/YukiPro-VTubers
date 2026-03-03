@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>页面标题 - JK Project</title>
+    <link rel="stylesheet" href="../style.css"> </head>
+    <link rel="stylesheet" href="../profile.css">
+<body>
+
+<div class="outer-frame">
+    <div class="menu-trigger" onclick="toggleSidebar()"></div>
+    
+    <main class="main-content">
+        <h2 style="color: var(--theme-color); border-bottom: 2px solid;">CHARACTER / 成员介绍</h2>
+        <div class="content-body">
+            <div class="chara-index-wrapper">
+                <div class="chara-header">
+                    <h2 style="color: var(--theme-color); letter-spacing: 4px;">CHARACTER</h2>
+                    <p style="color: #999; font-size: 12px;">PROJECT JK / TALENT LIST</p>
+                </div>
+
+                <div class="chara-grid">
+                    <a href="yuki.html" class="chara-card" data-no="01">
+                        <div class="chara-thumb">
+                            <img src="../assets/img/chara/yuki_thumb.png" alt="">
+                        </div>
+                        <div class="chara-info">
+                            <span class="chara-no">01</span>
+                            <span class="chara-name">CHARA 01</span>
+                        </div>
+                    </a>
+                    <a href="yuki.html" class="chara-card" data-no="02">
+                        <div class="chara-thumb">
+                            <img src="../assets/img/chara/yuki_thumb.png" alt="">
+                        </div>
+                        <div class="chara-info">
+                            <span class="chara-no">02</span>
+                            <span class="chara-name">CHARA 02</span>
+                        </div>
+                    </a>
+                    <a href="yuki.html" class="chara-card" data-no="03">
+                        <div class="chara-thumb">
+                            <img src="../assets/img/chara/yuki_thumb.png" alt="">
+                        </div>
+                        <div class="chara-info">
+                            <span class="chara-no">03</span>
+                            <span class="chara-name">CHARA 03</span>
+                        </div>
+                    </a>
+                    <a href="yuki.html" class="chara-card" data-no="04">
+                        <div class="chara-thumb">
+                            <img src="../assets/img/chara/yuki_thumb.png" alt="">
+                        </div>
+                        <div class="chara-info">
+                            <span class="chara-no">04</span>
+                            <span class="chara-name">CHARA 04</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside class="nav-sidebar" id="sidebar">
+        <div style="margin-top:20px; font-weight:bold; color:var(--theme-color);">MENU</div>
+        <nav style="margin-top:40px;">
+            <a href="index.html" class="nav-item">TOP</a>
+            <a href="news.html" class="nav-item">NEWS</a>
+            <a href="char.html" class="nav-item">CHARACTER</a>
+        </nav>
+        <button onclick="toggleSidebar()" style="margin-top:auto; margin-bottom:40px; border:none; background:none; cursor:pointer; color:#999;">CLOSE ✕</button>
+    </aside>
+</div>
+
+<script>
+    function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('open');
+    }
+</script>
+
+</body>
+</html>

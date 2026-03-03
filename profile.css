@@ -1,5 +1,111 @@
 /* --- 子页面专用组件 --- */
 
+.chara-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.chara-card {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.chara-thumb {
+    width: 100%;
+    aspect-ratio: 3/4; /* 动画官网常见的比例 */
+    border: none;
+    border-radius: 15px;
+    transition: 0.3s;
+    background: transparent; /* 去掉灰色/白色底，让立绘直接展示在网页底色上 */
+    overflow: visible; /* 允许立绘超出这个方块 */
+}
+
+.chara-thumb img {
+    filter: drop-shadow(0 10px 15px rgba(255, 157, 187, 0.4)); /* 给透明底立绘加粉色投影 */
+    transform-origin: bottom center;
+}
+
+.chara-card:hover .chara-thumb img {
+    filter: drop-shadow(15px 15px 0px rgba(255, 157, 187, 0.4));
+    transform: scale(1.05); /* 悬停时立绘稍微放大 */
+}
+
+.chara-card:hover .chara-thumb {
+    border-color: var(--theme-color);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(255, 157, 187, 0.2);
+}
+
+.chara-info {
+    margin-top: 15px;
+    margin-left:3%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chara-no {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--theme-color);
+    font-style: italic;
+    opacity: 0.5;
+}
+
+.chara-name {
+    font-weight: bold;
+    color: #444;
+}
+
+/* 在 style.css 或 chara 页面添加 */
+.chara-header {
+    border-left: 5px solid var(--theme-color);
+    padding-left: 15px;
+    margin-bottom: 40px;
+}
+
+.chara-header h2 {
+    font-size: 2.5rem;
+    color: var(--theme-color);
+    margin: 0;
+    line-height: 1;
+}
+
+.chara-header .sub-title {
+    font-size: 0.9rem;
+    color: #ccc;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* 优化卡片外观 */
+.chara-card {
+    position: relative;
+    background: #fff;
+    border: 2px solid #f0f0f0; /* 浅色边框 */
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.chara-card:hover {
+    border-color: var(--theme-color);
+    transform: translateY(-10px); /* 向上跳动 */
+}
+
+/* 在卡片背后加一个淡色的数字编号作为装饰 */
+.chara-card::before {
+    content: attr(data-no); /* HTML里加 data-no="01" */
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(255, 157, 187, 0.1); /* 极淡的粉色数字 */
+    font-style: italic;
+}
+
 /* 1. 成员卡片 (用于 Character 页面) */
 .talent-grid {
     display: grid;

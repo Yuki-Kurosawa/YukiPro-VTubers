@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>页面标题 - JK Project</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+<div class="outer-frame">
+    <div class="menu-trigger" onclick="toggleSidebar()"></div>
+    
+    <main class="main-content">
+        <h2 style="color: var(--theme-color); border-bottom: 2px solid;">CHARACTER / 成员介绍</h2>
+        <div class="content-body">
+            <p>这里是新页面的内容区域...</p>
+        </div>
+    </main>
+
+    <aside class="nav-sidebar" id="sidebar">
+        <div style="margin-top:20px; font-weight:bold; color:var(--theme-color);">MENU</div>
+        <nav style="margin-top:40px;">
+            <a href="index.html" class="nav-item">TOP</a>
+            <a href="news.html" class="nav-item">NEWS</a>
+            <a href="char.html" class="nav-item">CHARACTER</a>
+        </nav>
+        <button onclick="toggleSidebar()" style="margin-top:auto; margin-bottom:40px; border:none; background:none; cursor:pointer; color:#999;">CLOSE ✕</button>
+    </aside>
+</div>
+
+<script>
+    function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('open');
+    }
+</script>
+
+</body>
+</html>

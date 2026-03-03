@@ -1,0 +1,63 @@
+/* 全局基础样式 */
+:root {
+    --theme-color: #ff9dbb;
+    --bg-grid: #fffdf2;
+    --border-width: 8px;
+}
+
+body, html {
+    margin: 0; padding: 0; height: 100%;
+    background-color: #ffcadd;
+    display: flex; align-items: center; justify-content: center;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    overflow: hidden;
+}
+
+/* 核心容器 */
+.outer-frame {
+    width: 95vw; height: 90vh;
+    background: white;
+    border: var(--border-width) solid var(--theme-color);
+    border-radius: 30px;
+    display: flex; position: relative; overflow: hidden;
+}
+
+/* 内容区域切换逻辑 */
+.main-content {
+    flex: 1;
+    position: relative;
+    background: linear-gradient(180deg, #fff 0%, #fff0f5 100%);
+    overflow-y: auto; /* 子页面内容多时允许滚动 */
+    padding: 60px;
+}
+
+/* 侧边导航逻辑 (与首页一致) */
+.nav-sidebar {
+    position: absolute; right: 0; top: 0; bottom: 0; width: 280px;
+    background-color: var(--bg-grid);
+    border-left: 4px solid var(--theme-color);
+    background-image: radial-gradient(var(--theme-color) 2px, transparent 0);
+    background-size: 20px 20px;
+    transform: translateX(105%);
+    transition: transform 0.4s ease;
+    z-index: 100;
+    display: flex; flex-direction: column; align-items: center; padding-top: 60px;
+}
+.nav-sidebar.open { transform: translateX(0); }
+
+.nav-item {
+    width: 200px; height: 45px; background: white;
+    border: 2px solid var(--theme-color); border-radius: 12px;
+    margin-bottom: 12px; display: flex; align-items: center;
+    justify-content: center; color: var(--theme-color);
+    text-decoration: none; font-weight: bold; transition: 0.3s;
+}
+.nav-item:hover { background: var(--theme-color); color: white; }
+
+/* 菜单按钮 */
+.menu-trigger {
+    position: absolute; top: 25px; right: 25px;
+    width: 50px; height: 50px; background: #26c6da;
+    border: 3px solid white; border-radius: 50%;
+    z-index: 101; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}

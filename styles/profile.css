@@ -25,6 +25,7 @@
 .chara-thumb img {
     filter: drop-shadow(0 10px 15px rgba(255, 157, 187, 0.4)); /* 给透明底立绘加粉色投影 */
     transform-origin: bottom center;
+    width:100%;
 }
 
 .chara-card:hover .chara-thumb img {

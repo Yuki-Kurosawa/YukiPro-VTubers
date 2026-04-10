@@ -72,3 +72,28 @@
     color: #555;
     font-size: 1.1rem;
 }
+
+/* 档案页 bio 详情区 */
+.bio-section {
+    margin-top: 10px;
+}
+
+.bio-row {
+    display: flex;
+    align-items: baseline;
+    padding: 8px 0;
+    border-bottom: 1px dashed #f0d0d8;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.bio-row label {
+    min-width: 60px;
+    color: var(--theme-color);
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.bio-row span {
+    color: #444;
+}
